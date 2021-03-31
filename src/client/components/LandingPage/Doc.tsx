@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { ListItem } from '@material-ui/core';
+import { Card, CardContent, CardActions, Link, Button } from '@material-ui/core';
+
+
 
 
 class DocContainer extends Component {
@@ -10,11 +12,21 @@ class DocContainer extends Component {
 
 
   render() {
+    
     return (
-      <div>
-        <h3>Doc</h3>
-        <ListItem>list doc</ListItem>
-      </div>
+      <Card>
+        <CardContent>
+          Doc of the Day <br></br>
+          <Link>Doc URL</Link>
+        </CardContent>
+        
+
+        <CardActions>
+          <Button size="small" variant="contained">Edit</Button>
+          <Button size="small" variant="contained" color="secondary">Delete</Button>
+        </CardActions>
+
+      </Card>
     )
   }
 }

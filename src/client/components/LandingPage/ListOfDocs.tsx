@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Doc from './Doc';
-import { List } from '@material-ui/core';
+import { Card, List } from '@material-ui/core';
 // c
 
 
@@ -17,10 +17,9 @@ class ListOfDocs extends Component {
     // console.log('url', this.props.url);
   return (
     <div>
-      <List>
-        LIST
+      <Card>
         {arrOfDocs}
-      </List>
+      </Card>
     </div>
   )
   }
