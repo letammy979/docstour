@@ -15,7 +15,8 @@ body {
   border: 1pt;
 }
 
-/* .primaryBtn {
-  background-color: green;
-  color: white;
-} */
+.card {
+  max-width: 300px;
+  margin: 25px;
+}
+

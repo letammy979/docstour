@@ -17,9 +17,9 @@ class ListOfDocs extends Component {
     // console.log('url', this.props.url);
   return (
     <div>
-      <Card>
+      <div>
         {arrOfDocs}
-      </Card>
+      </div>
     </div>
   )
   }

@@ -14,7 +14,7 @@ class DocContainer extends Component {
   render() {
     
     return (
-      <Card>
+      <Card className="card">
         <CardContent>
           Doc of the Day <br></br>
           <Link>Doc URL</Link>

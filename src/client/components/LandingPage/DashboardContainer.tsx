@@ -21,7 +21,7 @@ class DashboardContainer extends Component {
       <div>
         <Box>
           <Card><h2>Docs</h2></Card>
-          <Button variant="contained" color="primary">add a doc</Button>
+          <Button className="addBtn" variant="contained" color="primary">add a doc</Button>
           <ListOfDocs />
 
         </Box>
