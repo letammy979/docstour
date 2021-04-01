@@ -1,11 +1,16 @@
 import React, { Component } from 'react';
-import { Card, CardContent, CardActions, Link, Button } from '@material-ui/core';
+import { Card, CardActions, CardContent, Button, Link } from '@material-ui/core';
+
+interface Props {
+  name: string,
+  url: string,
+  notes: string
+}
 
 
+class DocContainer extends Component<Props> {
 
-
-class DocContainer extends Component {
-
+  
 
 
 
@@ -29,6 +34,7 @@ class DocContainer extends Component {
       </Card>
     )
   }
+
 }
 
 export default DocContainer;

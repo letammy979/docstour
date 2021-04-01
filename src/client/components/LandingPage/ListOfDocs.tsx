@@ -1,28 +1,37 @@
 import React, { Component } from 'react';
 import Doc from './Doc';
-import { Card, List } from '@material-ui/core';
-// c
+import { connect } from 'react-redux';
+import { List } from '@material-ui/core';
+import { RootState } from '../../redux/rootReducer';
+import { Document } from '../../redux/documentReducer';
 
+interface Props {
+  docList: Document[]
+}
 
-class ListOfDocs extends Component {
+class ListOfDocs extends Component<Props> {
   // render array of Docs
 
   render() {
-    const arrOfDocs: Object[] = [];
-
-    // let url: String = '';
-
-    arrOfDocs.push(<Doc />)
-    arrOfDocs.push(<Doc />)
-    // console.log('url', this.props.url);
-  return (
-    <div>
+    console.log(this.props.docList)
+    const docList = this.props.docList.map(document => {
+      return <li>Name: {document.name} | URL: {document.url} | Notes: {document.notes}</li>
+    })
+    return (
       <div>
-        {arrOfDocs}
+        <List>
+          LIST
+          {docList}
+        </List>
       </div>
-    </div>
-  )
+    )
   }
 }
 
-export default ListOfDocs;
+const mapStateToProps = (state: RootState) => {
+  return {
+    docList: state.document.docList
+  }
+};
+
+export default connect(mapStateToProps)(ListOfDocs);
