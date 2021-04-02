@@ -9,6 +9,7 @@ h2 {
 
 body {
   margin: auto;
+  text-align: center;
 }
 
 .DocList {
@@ -23,4 +24,8 @@ body {
 .card {
   max-width: 300px;
   margin: 25px;
+}
+
+.listContainer {
+  display: flex;
 }
